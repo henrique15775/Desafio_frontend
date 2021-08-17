@@ -6,6 +6,7 @@ body{
   background-color: rgba(250, 64, 64, 0.63);
   color:rgb(255, 255, 255);
   font-family: 'Kanit', sans-serif;
+  overflow-y: hidden;
 }
 
 #texto-rightside{
