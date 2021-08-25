@@ -19,15 +19,14 @@ app.get('/', (req,res) => {
 app.post('/add', (req,res) => {
   
   Post.create({
-    nome: req.body.fname,
-    email: req.body.emailadd
+    nome: req.body.fname + req.body.lname,
+    email: req.body.emailadd,
+    senha: req.body.secret
   }).then(()=>{
     res.send("Formulario enviado!!");
   }).catch((erro)=>{
     res.send(erro);
   });
-
-
 
 })
 
