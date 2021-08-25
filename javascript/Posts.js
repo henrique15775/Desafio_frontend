@@ -6,7 +6,11 @@ const Post = db.sequelize.define('postagens',{
   },
   email: {
     type: db.Sequelize.TEXT
+  },
+  senha:{
+    type: db.Sequelize.STRING
   }
+
 });
 
 module.exports= Post;
