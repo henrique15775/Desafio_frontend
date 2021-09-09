@@ -15,12 +15,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname,'public')));
-app.set('oxi','./index.html');
+app.set('index','./index.html');
 
 
 
 app.get('/',(req,res) => {
-  return res.render(oxi);
+  return res.render(index);
 })
 app.post('/ola',(req,res) => {
   
@@ -31,7 +31,7 @@ app.post('/ola',(req,res) => {
   }).then(()=>{
     res.redirect('./sent.html');
   }).catch((erro)=>{
-    res.send(erro + "DEUUUU RUIIIIIIIIIIIIIIMMMMMMMMM");
+    res.send(erro);
   });
 
 });
